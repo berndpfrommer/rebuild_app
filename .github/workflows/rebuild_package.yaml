@@ -1,0 +1,14 @@
+name: rebuild package
+
+on:
+  repository_dispatch:
+    types: [new-commits]
+name: rebuild package
+
+jobs:
+  rebuild-package
+    runs-on: ubuntu-latest
+    steps:
+      - name: actually rebuild
+        run: |
+          write-output "rebuilding package"
