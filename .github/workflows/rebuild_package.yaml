@@ -2,7 +2,7 @@ name: rebuild package
 
 on:
   workflow_dispatch:
-    types: [new-commits]
+    types: [remote_trigger]
 
 jobs:
   rebuild-package:
