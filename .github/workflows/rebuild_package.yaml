@@ -14,7 +14,6 @@ jobs:
     steps:
       - name: actually rebuild the package
         run: |
-          write-output "rebuilding package for tag: $TAG"
           echo "rebuilding package for tag: $TAG"
         env:
           TAG: ${{ inputs.tag }}
