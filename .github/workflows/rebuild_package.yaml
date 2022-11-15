@@ -1,14 +1,13 @@
 name: rebuild package
 
 on:
-  repository_dispatch:
+  workflow_dispatch:
     types: [new-commits]
-name: rebuild package
 
 jobs:
-  rebuild-package
+  rebuild-package:
     runs-on: ubuntu-latest
     steps:
-      - name: actually rebuild
+      - name: actually rebuild the package
         run: |
           write-output "rebuilding package"
